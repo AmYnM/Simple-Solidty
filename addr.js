@@ -2,11 +2,11 @@ const {ethers} = require("ethers");
 const {formatUnits} = require("@ethersproject/units");
 const { eth } = require("web3");
 
-const provider =  new ethers.providers.AlchemyProvider('goerli', 'IzVDCl4McUWWfm7xV6f2qzMx_CV6L5RQ');
+const provider =  new ethers.providers.AlchemyProvider('goerli', 'YOUR_API_KEY_HERE');
 
 async function getBalance() {
     try {
-        let address = "0x7Cd84fA273FC73171AFa983b3F4113c23f3235a4";
+        let address = "YOUR_ADDRESS_HERE ";
         let balance = await provider.getBalance(address);
         let ethBalance = formatUnits(balance, "ether")
         console.log("Get Balance", ethBalance);
